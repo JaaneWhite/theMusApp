@@ -1,0 +1,153 @@
+<template>
+  <header>
+    <b-row class="header-row">
+
+      <b-container>
+        <b-row class="burger-menu-row">
+          <ToggleMenu />
+        </b-row>
+        <b-row>
+          <b-col cols="12" xl="7">
+          <b-row class="title-text">ТЕАТРАЛЬНЫЕ МУЗЕИ И АРХИВЫ РОССИИ <br>И РУССКОГО ЗАРУБЕЖЬЯ</b-row>
+        </b-col>
+          <b-col cols="12" xl="1" class="empty-block"></b-col>
+          <b-col cols="12" xl="4" class="search-block">
+          <b-row class="search-row">
+            <b-form class="search-form">
+              <b-form-input id="search-input" placeholder="Поиск" type="search"></b-form-input>
+              <b-button class="search-button keyboard-button"></b-button>
+              <b-img src="~assets/img/divider.png" class="divider-img"></b-img>
+              <b-button class="search-button sb-button"></b-button>
+            </b-form>
+          </b-row>
+          <b-row class="link-row">
+            <b-col cols="9" class="left-link"><b-link to="#" class="search-link">Расширенный поиск</b-link></b-col>
+            <b-col cols="3" class="right-link"><b-link to="#" class="search-link">А - Я</b-link></b-col>
+          </b-row>
+        </b-col>
+        </b-row>
+      </b-container>
+    </b-row>
+
+
+  </header>
+</template>
+
+<script>
+import TopMenu from "~/components/ToggleMenu";
+import ToggleMenu from "~/components/ToggleMenu";
+export default {
+  name: "HeaderComponent",
+  components: {ToggleMenu, TopMenu}
+}
+</script>
+
+<style scoped>
+.header-row {
+  height: 429px;
+  background-image: url("~assets/img/header bg.png");
+}
+.burger-menu-row {
+  height: 80px;
+}
+.title-text {
+  color: white;
+  font-size: 22px;
+  text-align: left;
+  line-height: 1.389;
+  margin: 40px 0 50px 0px;
+  padding-left: 15px;
+}
+.empty-block {
+  padding: 0;
+}
+.search-block {
+  display: flex;
+  text-align: right;
+  flex-direction: column;
+  margin-top: 4vw;
+}
+.search-row {
+  margin: 0;
+  padding-left: 15px;
+}
+.search-form {
+  text-align: right;
+  display: flex;
+  margin-right: 0;
+  margin-left: 0;
+  width: 100%;
+  border-radius: 25px;
+  opacity: 75%;
+  height: 44px;
+  padding: 0 20px 0 10px;
+  background-color: white;
+
+}
+.search-form:active, .search-form:focus, .search-form:hover {
+  opacity: 100%;
+}
+.search-button {
+  background-color: transparent;
+  border: none;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.keyboard-button {
+  display: none;
+}
+.sb-button {
+  background-image: url("~assets/img/search.png");
+}
+.sb-button:active, .sb-button:hover, .sb-button:focus {
+  background-image: url("~assets/img/search r.png");
+}
+.divider-img {
+  display: none;
+
+}
+#search-input {
+  color: #31112C !important;
+  height: 100%;
+  font-style: italic;
+  font-size: 14px;
+  line-height: 1.2;
+  border: none;
+  box-shadow: none;
+  background-color: transparent;
+}
+.link-row {
+  margin: 10px 0 0;
+  text-align: left;
+  padding-left: 15px;
+
+}
+.search-link{
+  color: white !important;
+  text-decoration: none;
+  border-bottom: dotted 2px;
+  font-size: 14px;
+  line-height: 2.143;
+  text-shadow: 0 0 1px rgba(39, 0, 0, 0.004);
+}
+.left-link {
+  padding: 0;
+}
+.right-link {
+  text-align: right;
+  padding: 0;
+}
+
+/* планшетная версия - 768-1024 px*/
+@media (min-width: 768px) {
+  .keyboard-button {
+    display: inline-block;
+    background-image: url("~assets/img/keyboard.png");
+  }
+  .divider-img {
+    display: inline-block;
+    margin: 5px;
+
+  }
+}
+</style>
