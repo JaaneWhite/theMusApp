@@ -92,11 +92,14 @@ export default {
   .header-carousel-row {
     display: none;
   }
+  .menu-row {
+    display: none;
+  }
 
   .burger-menu-row {
     height: 80px;
   }
-  .project-text-center {
+  .project-text-center, .project-text-top {
     display: none;
   }
   .title-col {
