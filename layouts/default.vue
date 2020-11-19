@@ -21,7 +21,7 @@
     font-family: 'Roboto', sans-serif;
     color: #270000;
   }
-    .row, .container {
+  .row, .container {
     padding: 0;
   }
   .row {
@@ -81,7 +81,7 @@
     background-color: #e5d1b3;
     margin: 0;
     width: 100%;
-    transform: translate3d(15px, 80px, 0) !important;
+    transform: translate3d(0, 80px, 0) !important;
     height: 349px;
   }
 
@@ -89,6 +89,55 @@
     font-size: 16px;
     color: #270000;
     font-weight: bold;
+  }
+
+  .list-button, .list-button:hover, .list-button:active, .list-button:focus {
+    background-color: white;
+    width: 90%;
+    color: #270000;
+    font-weight: bold;
+    text-align: left;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+  }
+  .list-button-dd, .list-button-dd:hover, .list-button-dd:active, .list-button-dd:focus {
+    background-color: white;
+    background-image: url("~assets/img/list-arrows.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 10%;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+  }
+  .collection-Menu-dd.show > .btn-secondary.dropdown-toggle {
+    background-color: white;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+  }
+  .collection-menu-button {
+    width: 100%;
+    color: #270000;
+    font-size: 15px;
+    border-bottom: solid #e5eff1 1px;
+  }
+  .collection-menu-button .dropdown-item {
+    color: #270000;
+    font-size: 15px;
+  }
+
+  .collection-Menu-dd .dropdown-menu {
+    width: 100%;
+    border-radius: 0;
+    border: solid #cf6a40 3px;
+    max-height: 560px;
+    height: auto;
+    overflow: scroll;
+    background-color: white;
+    color: #270000;
+    transform: translate3d(0, 30px, 0) !important;
   }
 }
 @media (max-width: 1023px) {
