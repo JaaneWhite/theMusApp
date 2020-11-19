@@ -43,6 +43,7 @@ export default {
   white-space: normal;
   text-align: center;
   display: flex;
+  margin: auto;
 }
 
 

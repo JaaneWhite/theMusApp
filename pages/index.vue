@@ -1,7 +1,7 @@
 <template>
   <b-row class="header-row">
     <b-container>
-      Привет
+
     </b-container>
   </b-row>
 </template>
