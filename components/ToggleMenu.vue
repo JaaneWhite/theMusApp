@@ -50,7 +50,6 @@ export default {
   width: 100%;
   height: 80px;
   font-size: 10px;
-  padding-left: 15px;
 
 }
 .toggle-menu-item {

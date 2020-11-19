@@ -11,9 +11,11 @@ export default {}
 </script>
 
 <style>
-.header-row {
-  height: 425px;
-  background-color: red;
+/* по умолчанию -  мобильная версия - 0 - 767 px*/
+@media (min-width: 0) {
+  .header-row {
+    height: 425px;
+  }
 }
 /* планшетная версия - 768-1024 px*/
 @media (min-width: 768px) {
