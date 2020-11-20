@@ -28,6 +28,11 @@
     margin: 0;
   }
 
+  a, a:hover{
+    color: #270000;
+  }
+
+
   .sr-only {
     display: none;
   }
