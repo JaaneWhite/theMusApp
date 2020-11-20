@@ -23,6 +23,8 @@ export default {
 .c-menu-button a {
   padding-left: 0;
   color: #270000;
+  font-size: 16px;
+  line-height: 1.2;
 }
 
 .c-menu-button:hover a {

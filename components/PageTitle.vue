@@ -28,5 +28,11 @@ export default {
     font-size: 24px;
   }
 }
+/* пк версия более 1024 px*/
+@media (min-width: 1024px) {
+  .page-title {
+    font-size: 36px;
+  }
+}
 
 </style>
