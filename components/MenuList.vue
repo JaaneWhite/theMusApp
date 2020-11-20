@@ -30,7 +30,9 @@ export default {
 .c-menu-button:hover a {
   color: #d78d5e !important;
 }
-
+.nav-item {
+  height: auto;
+}
 
 
 </style>

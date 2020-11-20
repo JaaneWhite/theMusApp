@@ -245,7 +245,10 @@ export default {
 }
 /* планшетная версия - 768-1024 px*/
 @media (min-width: 768px) {
-
+  .person-tabs {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 /* пк версия более 1024 px*/
 @media (min-width: 1024px) {

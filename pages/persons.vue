@@ -17,7 +17,11 @@
           class="menu-list"
         />
 
-        <AlphabetSort :alphabet-options="alphabetOptions" :alphabet-selected="alphabetSelected"/>
+        <AlphabetSort
+          :alphabet-options="alphabetOptions"
+          :alphabet-selected="alphabetSelected"
+          class="alphabet-sort"
+        />
 
         <b-button v-b-modal.modalPopover class="person-select-button">{{selectedPerson}}</b-button>
 
@@ -277,6 +281,9 @@ export default {
 
   .menu-list, .person-list-pagination {
     display: flex;
+  }
+  .person-select-button, .alphabet-sort {
+    display: none;
   }
 }
 
