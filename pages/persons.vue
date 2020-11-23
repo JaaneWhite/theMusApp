@@ -5,12 +5,16 @@
     </b-row>
     <page-title :page-title-text="pageTitleText" />
     <b-row>
-      <b-col cols="12" md="3" class="menu-col">
-        <pagination
-          class="person-list-pagination"
-          :total-rows="personNameListRows"
-          :pagination-area-controls="personListPaginationAreaControls"
-          :per-page="personNameListPerPage"/>
+      <b-col cols="12" md="3"
+             class="menu-col"
+      >
+        <b-row class="left-pagination-row">
+          <pagination
+            class="person-list-pagination"
+            :total-rows="personNameListRows"
+            :pagination-area-controls="personListPaginationAreaControls"
+            :per-page="personNameListPerPage"/>
+        </b-row>
         <menu-list
           :menu-list-items="personlist"
           id="person-name-list"
@@ -18,9 +22,8 @@
         />
 
         <AlphabetSort
-          :alphabet-options="alphabetOptions"
-          :alphabet-selected="alphabetSelected"
           class="alphabet-sort"
+          v-on:selectChanged="alphabetSelectChanged"
         />
 
         <b-button v-b-modal.modalPopover class="person-select-button">{{selectedPerson}}</b-button>
@@ -29,7 +32,7 @@
           <template #modal-header="{ close }">
             <!-- Emulate built in modal header close button action -->
               <div class="modal-header-title">
-                {{'Персоны - ' + alphabetSelected}}
+                {{'Персоны - ' + pAlphabetSelected}}
               </div>
               <b-col class="modal-header-btn-block">
                 <b-button @click="close()" class="modal-close-button">
@@ -124,44 +127,17 @@ export default {
         {text: 'Авалиани Ной Иванович', link: 'persons'},
         {text: 'Аверин Андрей Викторович', link: 'persons'},
       ],
-      alphabetSelected: 'А',
-      alphabetOptions: [
-        { text: 'А', value: 'А' },
-        { text: 'Б', value: 'Б' },
-        { text: 'В', value: 'В' },
-        { text: 'Г', value: 'Г' },
-        { text: 'Д', value: 'Д' },
-        { text: 'Е', value: 'Е' },
-        { text: 'Ё', value: 'Ё' },
-        { text: 'Ж', value: 'Ж' },
-        { text: 'З', value: 'З' },
-        { text: 'И', value: 'И' },
-        { text: 'Й', value: 'Й' },
-        { text: 'К', value: 'К' },
-        { text: 'Л', value: 'Л' },
-        { text: 'М', value: 'М' },
-        { text: 'Н', value: 'Н' },
-        { text: 'О', value: 'О' },
-        { text: 'П', value: 'П' },
-        { text: 'Р', value: 'Р' },
-        { text: 'С', value: 'С' },
-        { text: 'т', value: 'Т' },
-        { text: 'У', value: 'У' },
-        { text: 'Ф', value: 'Ф' },
-        { text: 'Х', value: 'Х' },
-        { text: 'Ц', value: 'Ц' },
-        { text: 'Ч', value: 'Ч' },
-        { text: 'Ш', value: 'Ш' },
-        { text: 'Щ', value: 'Щ' },
-        { text: 'Э', value: 'Э' },
-        { text: 'Ю', value: 'Ю' },
-        { text: 'Я', value: 'Я' }
-      ]
+      pAlphabetSelected: 'A'
     }
   },
   computed: {
     personNameListRows() {
       return this.personlist.length
+    }
+  },
+  methods: {
+    alphabetSelectChanged: function (alphabetSelected){
+      this.pAlphabetSelected = alphabetSelected;
     }
   }
 }
@@ -285,10 +261,30 @@ export default {
   .person-select-button, .alphabet-sort {
     display: none;
   }
+  .person-list-pagination {
+    text-align: center;
+    margin: auto;
+  }
+  .left-pagination-row {
+    padding-top: 10px;
+    padding-bottom: 30px;
+  }
+  .content-col {
+    padding-left: 20px;
+  }
 }
 
 /* пк версия более 1024 px*/
 @media (min-width: 1024px) {
-
+  .content-col {
+    padding-left: 40px;
+  }
+  .person-title {
+    font-size: 26px;
+    margin-bottom: 10px;
+  }
+  .person-text {
+    margin-bottom: 20px;
+  }
 }
 </style>

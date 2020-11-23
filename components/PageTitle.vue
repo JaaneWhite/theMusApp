@@ -16,8 +16,8 @@ export default {
 @media (min-width: 0) {
   .page-title {
     font-size: 24px;
-    margin-bottom: 30px;
-    margin-top: 20px;
+    margin-bottom: 25px;
+    margin-top: 24px;
     font-weight: bold;
     line-height: 1.389;
   }

@@ -310,6 +310,12 @@ export default {}
 }
 /* пк версия более 1024 px*/
 @media (min-width: 1024px) {
-
+  .section-card {
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+  .card-title {
+    min-height: 62px;
+  }
 }
 </style>

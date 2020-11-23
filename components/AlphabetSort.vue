@@ -6,15 +6,55 @@
         :options="alphabetOptions"
         buttons
         name="radios-btn-default"
+        @change="onSelectChanges()"
     ></b-form-radio-group>
   </b-form-group>
 </template>
 <script>
 export default {
   name: 'AlphabetSort',
-  props: {
-    alphabetOptions: {},
-    alphabetSelected: {}
+
+  data () {
+    return {
+      alphabetSelected: 'А',
+      alphabetOptions: [
+        { text: 'А', value: 'А' },
+        { text: 'Б', value: 'Б' },
+        { text: 'В', value: 'В' },
+        { text: 'Г', value: 'Г' },
+        { text: 'Д', value: 'Д' },
+        { text: 'Е', value: 'Е' },
+        { text: 'Ё', value: 'Ё' },
+        { text: 'Ж', value: 'Ж' },
+        { text: 'З', value: 'З' },
+        { text: 'И', value: 'И' },
+        { text: 'Й', value: 'Й' },
+        { text: 'К', value: 'К' },
+        { text: 'Л', value: 'Л' },
+        { text: 'М', value: 'М' },
+        { text: 'Н', value: 'Н' },
+        { text: 'О', value: 'О' },
+        { text: 'П', value: 'П' },
+        { text: 'Р', value: 'Р' },
+        { text: 'С', value: 'С' },
+        { text: 'т', value: 'Т' },
+        { text: 'У', value: 'У' },
+        { text: 'Ф', value: 'Ф' },
+        { text: 'Х', value: 'Х' },
+        { text: 'Ц', value: 'Ц' },
+        { text: 'Ч', value: 'Ч' },
+        { text: 'Ш', value: 'Ш' },
+        { text: 'Щ', value: 'Щ' },
+        { text: 'Э', value: 'Э' },
+        { text: 'Ю', value: 'Ю' },
+        { text: 'Я', value: 'Я' }
+      ]
+    }
+  },
+  methods: {
+    onSelectChanges: function () {
+      this.$emit("selectChanged", this.alphabetSelected)
+    }
   }
 }
 </script>

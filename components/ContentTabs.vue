@@ -15,6 +15,9 @@
           </b-card>
         </b-col>
       </b-row>
+      <b-row class="pagination-row">
+        <pagination />
+      </b-row>
     </b-tab>
   </b-tabs>
 
@@ -224,7 +227,7 @@ export default {
   }
   .nav-item {
     margin: auto;
-    height: 65px;
+    height: 50px;
   }
   .nav-tabs .nav-link {
     background-color: #dfd0b3 !important;
@@ -279,10 +282,10 @@ export default {
 
   }
   .person-card-text a {
-    font-size: 16px;
+    font-size: 14px;
   }
   .nav-tabs .nav-link {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 </style>

@@ -23,7 +23,7 @@
         </b-dropdown>
       </b-col>
       <b-col cols="12" md="8" xl="9" class="collection-col">
-        <b-row>
+        <b-row class="collection-title-row">
           <b-col cols="12" xl="6" class="collection-title">Афиши</b-col>
           <b-col cols="12" xl="6" class="collection-num">Показано экспонатов: 1-12 из 774</b-col>
         </b-row>
@@ -245,11 +245,18 @@ export default {
   /* пк версия более 1024 px*/
   @media (min-width: 1024px) {
     .collection-title {
-      margin-left: 30px;
+      margin-left: 0;
+      padding-left: 30px;
     }
     .collection-num {
-      margin-left: 15px;
+      text-align: right;
     }
+    .collection-title-row {
+      flex-direction: row;
+    }
+  }
+  .poster-card-text {
+    max-height: 180px;
   }
 
 
