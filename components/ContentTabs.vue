@@ -1,11 +1,18 @@
 <template>
-  <b-tabs justified class="person-tabs">
+  <b-tabs
+    justified
+    class="person-tabs"
+  >
     <b-tab v-for="tab in tabContent" :title="tab.tabCaption + ' (' + tab.tabItems.length + ')'">
       <b-row class="pagination-row">
         <pagination />
       </b-row>
       <b-row class="person-row">
-        <b-col cols="6" md="4" xl="3" v-for="item in tab.tabItems" class="person-tab-col">
+        <b-col cols="6"
+               md="4"
+               :xl=cardsRowSize
+               v-for="item in tab.tabItems"
+               class="person-tab-col">
           <b-card class="person-card">
             <div class="person-card-img-cont">
               <b-card-img :src="item.image" top class="person-card-image">
@@ -29,7 +36,9 @@ export default {
   name: "ContentTabs",
   components: {Pagination},
   props: {
+    cardsRowSize: {}
   },
+
   data() {
     return {
       tabContent: [

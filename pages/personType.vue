@@ -20,7 +20,7 @@
         <p class="info-link"><b-link class="info-link" to="persontype">http://theatre-museum.ru/object/2472680</b-link></p>
       </b-row>
     </b-row>
-    <content-tabs />
+    <content-tabs cards-row-size="3" />
   </b-container>
 </template>
 

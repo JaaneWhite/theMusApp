@@ -88,7 +88,7 @@
 
 
 
-        <ContentTabs />
+        <ContentTabs cards-row-size="4" />
 
       </b-col>
     </b-row>
