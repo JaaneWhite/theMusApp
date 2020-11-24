@@ -58,32 +58,51 @@ export default {
   }
 }
 </script>
-<style>
+<style lang="scss">
 /* по умолчанию -  мобильная версия - 0 - 767 px*/
 @media (min-width: 0) {
-  .alphabet-group .btn-group {
-    display: block;
+  .alphabet-group {
+    .btn-group {
+      display: block;
+    }
+    .btn-secondary{
+      background-color: white;
+      color: #270000;
+      font-size: 16px;
+      font-weight: bold;
+      text-transform: uppercase;
+      line-height: 1.5;
+      border: none;
+      border-radius: 25px !important;
+      height: 34px;
+      width: 34px;
+      margin: 5px !important;
+      box-shadow: none;
+      &:hover {
+        background-color: white;
+        color: #270000;
+        font-size: 16px;
+        font-weight: bold;
+        text-transform: uppercase;
+        line-height: 1.5;
+        border: none;
+        border-radius: 25px !important;
+        height: 34px;
+        width: 34px;
+        margin: 5px !important;
+        box-shadow: none;
+      }
+      &.active {
+        background-color: #eeeadf !important;
+        color: #270000 !important;
+        box-shadow: none;
+      }
+    }
   }
 
-  .alphabet-group .btn-secondary,.alphabet-group .btn-secondary:hover  {
-    background-color: white;
-    color: #270000;
-    font-size: 16px;
-    font-weight: bold;
-    text-transform: uppercase;
-    line-height: 1.5;
-    border: none;
-    border-radius: 25px !important;
-    height: 34px;
-    width: 34px;
-    margin: 5px !important;
-    box-shadow: none;
-  }
-  .alphabet-group .btn-secondary.active {
-    background-color: #eeeadf !important;
-    color: #270000 !important;
-    box-shadow: none;
-  }
+
+
+
 }
 
 /* планшетная версия - 768-1024 px*/

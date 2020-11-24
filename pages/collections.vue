@@ -263,6 +263,10 @@ export default {
 
 
 }
+/* пк версия более 1024 px*/
+@media (min-width: 1024px) {
+
+}
 
 
 

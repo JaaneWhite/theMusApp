@@ -14,24 +14,20 @@ export default {
   }
 }
 </script>
-<style scoped>
+<style lang="scss" scoped>
 .c-menu-button {
   margin: 0;
   padding-bottom: 6px;
-}
-
-.c-menu-button a {
-  padding-left: 0;
-  color: #270000;
-  font-size: 16px;
-  line-height: 1.45;
-}
-
-.c-menu-button:hover a {
-  color: #d78d5e !important;
-}
-.nav-item {
   height: auto;
+  a {
+    padding-left: 0;
+    color: #270000;
+    font-size: 16px;
+    line-height: 1.45;
+    &:hover {
+      color: #d78d5e !important;
+    }
+  }
 }
 
 

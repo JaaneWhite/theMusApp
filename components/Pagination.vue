@@ -5,8 +5,7 @@
     :per-page="perPage"
     :aria-controls="paginationAreaControls"
     pills
-    first-number
-    last-number
+
     class="pagination"
     next-text=""
     next-class="pagination-next-button"

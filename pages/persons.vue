@@ -82,10 +82,12 @@ import Pagination from "@/components/Pagination";
 import MenuList from "@/components/MenuList";
 import AlphabetSort from "@/components/AlphabetSort";
 import ContentTabs from "@/components/ContentTabs";
+import BreadCrumbs from "@/components/BreadCrumbs";
+import PageTitle from "@/components/PageTitle";
 
 export default {
   name: "persons",
-  components: {ContentTabs, AlphabetSort, MenuList, Pagination},
+  components: {PageTitle, BreadCrumbs, ContentTabs, AlphabetSort, MenuList, Pagination},
   data() {
     return {
       pageTitleText: 'Персоны',
@@ -153,6 +155,7 @@ export default {
   }
   .content-col {
     padding: 0;
+    margin-top: 30px;
   }
   .menu-list, .person-list-pagination {
     display: none;
@@ -271,6 +274,8 @@ export default {
   }
   .content-col {
     padding-left: 20px;
+    margin-top: 0;
+
   }
 }
 
