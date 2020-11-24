@@ -81,7 +81,7 @@
             </b-row>
           </b-col>
           <b-col class="content-photo" cols="12" md="4">
-            <b-img src="../assets/img/persons/1-1.png" class="content-photo-img"/>
+            <b-img v-img src="../assets/img/persons/1-1.png" class="content-photo-img"/>
           </b-col>
 
         </b-row>
@@ -103,7 +103,9 @@ import AlphabetSort from "@/components/AlphabetSort";
 import ContentTabs from "@/components/ContentTabs";
 import BreadCrumbs from "@/components/BreadCrumbs";
 import PageTitle from "@/components/PageTitle";
-
+import Vue from 'vue';
+import VueImg from 'v-img';
+Vue.use(VueImg);
 export default {
   name: "persons",
   components: {PageTitle, BreadCrumbs, ContentTabs, AlphabetSort, MenuList, Pagination},
