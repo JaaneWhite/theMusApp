@@ -61,35 +61,9 @@
 
       </b-col>
       <b-col cols="12" md="9" class="content-col">
-        <b-row class="content-row">
-          <b-col class="content-info" cols="12" md="8">
-            <b-row class="person-title">Брехт Бертольт</b-row>
-            <b-row class="person-date">
-              <p>(нем. Bertolt Brecht)</p>
-              <p>(10 февраля 1898 - 14 августа 1956)</p>
-            </b-row>
-            <b-row class="person-text">Немецкий драматург, поэт, театральный деятель, теоретик театра, основатель театра "Берлинер ансамбль"</b-row>
-            <b-row style="flex-direction: column">
-              <b-row class="person-info">
-                <p class="info-title">Роды занятий: &nbsp;</p>
-                <p><b-link class="info-link">Драматург</b-link>, <b-link class="info-link">поэт</b-link></p>
-              </b-row>
-              <b-row class="person-info">
-                <p class="info-title">Постоянная ссылка на данное описание: &nbsp;</p>
-                <p class="info-link"><b-link class="info-link" to="persontype">http://theatre-museum.ru/object/2472680</b-link></p>
-              </b-row>
-            </b-row>
-          </b-col>
-          <b-col class="content-photo" cols="12" md="4">
-            <b-img v-img src="../assets/img/persons/1-1.png" class="content-photo-img"/>
-          </b-col>
-
-        </b-row>
-
-
-
+        <b-row class="person-title">{{personTitle}}</b-row>
+        <person-content />
         <ContentTabs cards-row-size="4" />
-
       </b-col>
     </b-row>
 
@@ -105,13 +79,15 @@ import BreadCrumbs from "@/components/BreadCrumbs";
 import PageTitle from "@/components/PageTitle";
 import Vue from 'vue';
 import VueImg from 'v-img';
+import PersonContent from "@/pages/PersonContent";
 Vue.use(VueImg);
 export default {
   name: "persons",
-  components: {PageTitle, BreadCrumbs, ContentTabs, AlphabetSort, MenuList, Pagination},
+  components: {PersonContent, PageTitle, BreadCrumbs, ContentTabs, AlphabetSort, MenuList, Pagination},
   data() {
     return {
       pageTitleText: 'Персоны',
+      personTitle: 'Байрон Джордж Гордон',
       personListPaginationAreaControls: 'person-name-list',
       personNameListPerPage: '20',
       selectedPerson: 'Персоны',
@@ -177,66 +153,18 @@ export default {
   .content-col {
     padding: 0;
     margin-top: 30px;
-    .content-row {
-      display: flex;
-      flex-direction: column-reverse;
-      .content-info {
-        padding: 0;
-        margin-top: 30px;
-        .person-title {
-          font-size: 20px;
-          font-weight: bold;
-          padding: 0;
-          margin-bottom: 20px;
-        }
-        .person-date {
-          font-weight: bold;
-          flex-direction: column;
-          margin-bottom: 20px;
-          p {
-            margin-bottom: 0;
-          }
-        }
-        .person-text {
-          margin-bottom: 20px;
-        }
-        .person-info {
-          text-align: left;
-          margin: 0;
-          p {
-            text-align: left;
-            margin: 0;
-          }
-          .info-title {
-            color: #9f959d;
-            margin-bottom: 0;
-          }
-          .info-link {
-            font-weight: bold;
-            text-decoration: underline;
-            margin-bottom: 0;
-          }
-
-        }
-
-      }
-      .content-photo {
-        padding: 0;
-        .content-photo-img {
-          width: 100%;
-        }
-      }
+    .person-title {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 30px;
     }
   }
-
   .menu-list, .person-list-pagination {
     display: none;
   }
   .menu-col {
     padding: 0;
   }
-
-
 
   .person-select{
     &-button, &-button:hover, &-button:focus, &-button:active{
@@ -319,20 +247,16 @@ export default {
     padding-bottom: 30px;
   }
   .content-col {
-    padding-left: 20px;
+    padding: 0;
     margin-top: 0;
-    .content-row {
-      flex-direction: row;
-      .content-info {
-        padding: 0;
-        margin-top: 0;
-      }
-      .content-photo {
-        padding-left: 15px;
-      }
+    .person-title {
+      font-size: 24px;
+
     }
   }
 }
+
+
 
 /* пк версия более 1024 px*/
 @media (min-width: 1024px) {
@@ -340,7 +264,7 @@ export default {
     padding-left: 40px;
     .person-title {
       font-size: 26px;
-      margin-bottom: 10px;
+      margin-bottom: 20px;
     }
     .person-text {
       margin-bottom: 20px;
