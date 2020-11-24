@@ -181,9 +181,9 @@ export default {
     font-weight: bold;
     flex-direction: column;
     margin-bottom: 20px;
-  }
-  .person-date p{
-    margin-bottom: 0;
+    p {
+      margin-bottom: 0;
+    }
   }
   .info-title {
     color: #9f959d;
@@ -287,7 +287,6 @@ export default {
   .content-col {
     padding-left: 20px;
     margin-top: 0;
-
   }
 }
 

@@ -11,7 +11,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .breadcrumb {
   background-color: transparent;
   color: #cac3b1;

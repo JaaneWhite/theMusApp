@@ -46,7 +46,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 /* мобильная версия - 0 - 767 px*/
 @media (min-width: 0) {
   .menu-lg {
@@ -54,37 +54,32 @@ export default {
   }
   .menu-sm {
     margin: 0;
+    .menu-sm-col {
+      height: 50px;
+      padding: 0;
+      width: 100%;
+      margin: auto;
+      align-items: center;
+      display: grid;
+      border: solid white 1px;
+      text-transform: none;
+      a {
+        color: #270000;
+        font-size: 12px;
+        font-weight: bold;
+        white-space: normal;
+        text-align: center;
+        display: grid;
+        margin: auto;
+        border: none;
+        border-radius: 0;
+        background-color: #e5d1b3;
+        width: 100%;
+        height: 100%;
+      }
+    }
   }
-  .menu-sm-col {
-    height: 50px;
-    display: flex;
-    padding: 0;
 
-  }
-  .menu-sm-col {
-    width: 100%;
-    margin: auto;
-    padding: 0;
-    align-items: center;
-    display: grid;
-    border: solid white 1px;
-    text-transform: none;
-  }
-  .menu-sm-col a {
-    color: #270000;
-    font-size: 12px;
-    font-weight: bold;
-    white-space: normal;
-    text-align: center;
-    display: grid;
-    margin: auto;
-    border: none;
-    border-radius: 0;
-    background-color: #e5d1b3;
-    width: 100%;
-    height: 100%;
-
-  }
 
 }
 /* планшетная версия - 768-1024 px*/
@@ -99,31 +94,31 @@ export default {
   .site-menu {
     flex-wrap: nowrap;
     background-color: #e5d1b3;
-  }
-  .menu-button {
-    border: none;
-    border-radius: 0;
-    box-shadow: none;
-    height: 60px;
-    padding: 0;
-    display: flex;
-    text-align: center;
-    align-items: center;
+    .menu-button {
+      border: none;
+      border-radius: 0;
+      box-shadow: none;
+      height: 60px;
+      padding: 0;
+      display: flex;
+      text-align: center;
+      align-items: center;
+      &:hover {
+        background-color: #d3c2a2;
+      }
+      a {
+        color: #270000;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: bold;
+        white-space: normal;
+        text-align: center;
+        display: flex;
+        margin: auto;
+      }
 
-  }
-  .menu-button:hover {
-    background-color: #d3c2a2;
-  }
-  .menu-button a {
-    color: #270000;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 14px;
-    font-weight: bold;
-    white-space: normal;
-    text-align: center;
-    display: flex;
-    margin: auto;
+    }
   }
 }
 /* пк версия - 1024 - ... px*/
