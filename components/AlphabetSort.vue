@@ -107,9 +107,6 @@ export default {
 
 /* планшетная версия - 768-1024 px*/
 @media (min-width: 768px) {
-  .alphabet-group {
-    display: none;
-  }
 }
 
 /* пк версия более 1024 px*/

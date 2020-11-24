@@ -8,18 +8,6 @@
       <b-col cols="12" md="3"
              class="menu-col"
       >
-        <b-row class="left-pagination-row">
-          <pagination
-            class="person-list-pagination"
-            :total-rows="personNameListRows"
-            :pagination-area-controls="personListPaginationAreaControls"
-            :per-page="personNameListPerPage"/>
-        </b-row>
-        <menu-list
-          :menu-list-items="personlist"
-          id="person-name-list"
-          class="menu-list"
-        />
 
         <AlphabetSort
           class="alphabet-sort"
@@ -50,6 +38,26 @@
           </b-list-group>
 
         </b-modal>
+
+        <b-row class="left-pagination-row">
+          <pagination
+            class="person-list-pagination"
+            :total-rows="personNameListRows"
+            :pagination-area-controls="personListPaginationAreaControls"
+            :per-page="personNameListPerPage"/>
+        </b-row>
+        <menu-list
+          :menu-list-items="personlist"
+          id="person-name-list"
+          class="menu-list"
+        />
+        <b-row class="left-pagination-row">
+          <pagination
+            class="person-list-pagination"
+            :total-rows="personNameListRows"
+            :pagination-area-controls="personListPaginationAreaControls"
+            :per-page="personNameListPerPage"/>
+        </b-row>
 
       </b-col>
       <b-col cols="12" md="9" class="content-col">
@@ -261,7 +269,7 @@ export default {
   .menu-list, .person-list-pagination {
     display: flex;
   }
-  .person-select-button, .alphabet-sort {
+  .person-select-button {
     display: none;
   }
   .person-list-pagination {
