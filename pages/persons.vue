@@ -154,7 +154,7 @@ export default {
 
 </script>
 
-<style>
+<style lang="scss">
 /* по умолчанию -  мобильная версия - 0 - 767 px*/
 @media (min-width: 0) {
   .main-content {
@@ -202,66 +202,70 @@ export default {
     text-align: left;
     margin: 0;
   }
-  .person-col {
-    padding: 0;
-  }
-  .person-select-button, .person-select-button:hover, .person-select-button:focus, .person-select-button:active {
-    border: solid #cf6a40 3px;
-    width: 100%;
-    border-radius: 0;
-    background-color: white;
-    color: #270000;
-    box-shadow: none;
-    height: 40px;
-    overflow: hidden;
-    padding-right: 15%;
-    text-align: left;
-    font-weight: bold;
-    font-size: 14px;
-    background-image: url("~assets/img/list-arrows.png");
-    background-repeat: no-repeat;
-    background-position-y: center;
-    background-position-x: 95%;
+
+
+  .person-select{
+    &-button, &-button:hover, &-button:focus, &-button:active{
+      border: solid #cf6a40 3px;
+      width: 100%;
+      border-radius: 0;
+      background-color: white;
+      color: #270000;
+      box-shadow: none;
+      height: 40px;
+      overflow: hidden;
+      padding-right: 15%;
+      text-align: left;
+      font-weight: bold;
+      font-size: 14px;
+      background-image: url("~assets/img/list-arrows.png");
+      background-repeat: no-repeat;
+      background-position-y: center;
+      background-position-x: 95%;
+    }
   }
   .modal-content {
     border-radius: 0;
     border: solid #cf6a40 3px;
+    .modal-header {
+      .modal-header-title {
+        width: 80%;
+        display: flex;
+        font-size: 26px;
+        font-family: 'Roboto', sans-serif;
+        align-items: center;
+        color: #270000;
+        padding-top: 5px;
+      }
+      .modal-header-btn-block {
+        width: 20%;
+        .modal-close-button, .modal-close-button:hover, .modal-close-button:active, .modal-close-button:focus {
+          background-image: url("~assets/img/menu close.png");
+          background-repeat: no-repeat;
+          background-position-x: right;
+          background-position-y: center;
+          background-color: white;
+          width: 50px;
+          height: 50px;
+          border: none;
+          border-radius: 0;
+          margin-right: 0;
+        }
+      }
+    }
+    .modal-body {
+      .person-list-group {
+        border: none;
+        border-radius: 0;
+        overflow: scroll;
+        height: 600px;
+        .person-list-item {
+          border: none;
+          border-bottom: solid #9f959d 1px;
+        }
+      }
+    }
   }
-  .modal-header-title {
-    width: 80%;
-    display: flex;
-    font-size: 26px;
-    font-family: 'Roboto', sans-serif;
-    align-items: center;
-    color: #270000;
-    padding-top: 5px;
-  }
-  .modal-header-btn-block {
-    width: 20%;
-  }
-
-.modal-close-button, .modal-close-button:hover, .modal-close-button:active, .modal-close-button:focus {
-  background-image: url("~assets/img/menu close.png");
-  background-repeat: no-repeat;
-  background-position-x: right;
-  background-position-y: center;
-  background-color: white;
-  width: 50px;
-  height: 50px;
-  border: none;
-  border-radius: 0;
-  margin-right: 0;
-}
-.person-list-group {
-  border: none;
-  border-radius: 0;
-  overflow: scroll;
-  height: 600px;
-}
-.person-list-item {
-  border: none;
-  border-bottom: solid #9f959d 1px;
-}
 }
 /* планшетная версия - 768-1024 px*/
 @media (min-width: 768px) {
@@ -291,13 +295,13 @@ export default {
 @media (min-width: 1024px) {
   .content-col {
     padding-left: 40px;
-  }
-  .person-title {
-    font-size: 26px;
-    margin-bottom: 10px;
-  }
-  .person-text {
-    margin-bottom: 20px;
+    .person-title {
+      font-size: 26px;
+      margin-bottom: 10px;
+    }
+    .person-text {
+      margin-bottom: 20px;
+    }
   }
 }
 </style>

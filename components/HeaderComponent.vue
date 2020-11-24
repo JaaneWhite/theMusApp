@@ -41,7 +41,12 @@
             </b-col>
             <b-col cols="12" xl="1" class="empty-block"></b-col>
             <b-col cols="12" xl="4" class="search-block">
-
+              <b-form class="search-form">
+                <b-form-input id="search-input" placeholder="Поиск" type="search"></b-form-input>
+                <b-button class="search-button keyboard-button"></b-button>
+                <b-img src="~assets/img/divider.png" class="divider-img"></b-img>
+                <b-button class="search-button sb-button"></b-button>
+              </b-form>
           <b-row class="link-row">
             <b-col cols="9" class="left-link"><b-link to="#" class="search-link">Расширенный поиск</b-link></b-col>
             <b-col cols="3" class="right-link"><b-link to="#" class="search-link">А - Я</b-link></b-col>
